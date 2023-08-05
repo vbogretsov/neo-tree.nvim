@@ -414,6 +414,7 @@ local prepare_node = function(item, state)
 
   local should_pad = false
 
+  local wanted_width = 0
   for _, component in ipairs(renderer) do
     local component_data, component_wanted_width =
       M.render_component(component, item, state, remaining_cols - (should_pad and 1 or 0))

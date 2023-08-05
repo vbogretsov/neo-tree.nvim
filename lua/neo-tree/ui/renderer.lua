@@ -412,12 +412,6 @@ local prepare_node = function(item, state)
     end
   end
 
-  local wanted_width = 0
-  if state.current_position == "current" then
-    local longest = state.longest_node or 0
-    remaining_cols = math.min(remaining_cols, longest + 4)
-  end
-
   local should_pad = false
 
   for _, component in ipairs(renderer) do
